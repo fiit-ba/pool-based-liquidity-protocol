@@ -1,0 +1,49 @@
+[workspace]
+members = [
+    "contracts",
+    "utils/brush_lang",
+    "utils/brush_derive",
+]
+
+exclude = [
+    "project"
+]
+
+[package]
+name = "brush"
+authors = ["Supercolony <green.baneling@supercolony.net>"]
+version = "1.6.0"
+edition = "2018"
+
+[dependencies]
+contracts = { path = "./contracts", default-features = false }
+brush_lang = { path = "./utils/brush_lang", default-features = false }
+
+[lib]
+name = "brush"
+path = "lib.rs"
+crate-type = [
+    "rlib",
+]
+
+[features]
+default = ["std"]
+std = [
+    "contracts/std",
+    "brush_lang/std",
+]
+psp22 = ["contracts/psp22"]
+psp34 = ["contracts/psp34"]
+ownable = ["contracts/ownable"]
+access_control = ["contracts/access_control"]
+pausable = ["contracts/pausable"]
+
+[profile.release]
+panic = "abort"
+lto = true
+overflow-checks = false
+
+[profile.dev]
+panic = "abort"
+lto = true
+overflow-checks = false
