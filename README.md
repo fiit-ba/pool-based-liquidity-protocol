@@ -1,3 +1,6 @@
+If you want to use this code, please cite our article describing this solution:
+
+**IEEE style** K. Košťál, M. N. Bahar, R. Gazdík and M. Ries, "Advancing Decentralized Finance: A Comprehensive Pool-based Liquidity Protocol," 2023 Fifth International Conference on Blockchain Computing and Applications (BCCA), Kuwait, Kuwait, 2023, pp. 1-8.
 # Advancing Decentralized Finance: A Comprehensive Pool-based Liquidity Protocol
 
 ## Structure of repository
